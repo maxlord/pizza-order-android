@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/item_divider"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_padding"
+    android:showDividers="middle">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_name" />
+
+    <LinearLayout
+        android:id="@+id/coffeeType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/typeCappuccino"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/cappuccino"
+            android:textOn="@string/cappuccino" />
+
+        <ToggleButton
+            android:id="@+id/typeEspresso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/espresso"
+            android:textOn="@string/espresso" />
+
+        <ToggleButton
+            android:id="@+id/typeRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/regular"
+            android:textOn="@string/regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/coffeeSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/sizeSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/small"
+            android:textOn="@string/small" />
+
+        <ToggleButton
+            android:id="@+id/sizeMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/medium"
+            android:textOn="@string/medium" />
+
+        <ToggleButton
+            android:id="@+id/sizeLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/large"
+            android:textOn="@string/large" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:text="@string/price" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit" />
+</LinearLayout>
