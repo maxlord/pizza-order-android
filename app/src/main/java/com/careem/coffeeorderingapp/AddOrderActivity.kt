@@ -7,7 +7,7 @@ import com.careem.coffeeorderingapp.databinding.ActivityAddOrderBinding
 
 class AddOrderActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAddOrderBinding
+    lateinit var binding: ActivityAddOrderBinding
 
     val coffeeName by lazy { binding.name.text.toString() }
     val order by lazy { OrderRequest(coffeeName, size, type) }
@@ -23,9 +23,11 @@ class AddOrderActivity : AppCompatActivity() {
         binding.submit.setOnClickListener { submitOrder() }
     }
 
-    // Logic for the price, base price + 0.25 * size (small -> 0, medium -> 1, large -> 2)
+    // Logic for the price, basePrice + (basePrice * 0.25 * size) (size: small -> 0, medium -> 1, large -> 2)
     // Base price: Cappuccino (6$), Espresso (5$), Regular (4$)
-    // Example: Espresso Medium -> 5 + 5 * 0.25 = 6.25$
+    // Example: Espresso Large -> 5 + 5 * 0.25 * 2 = 7.5
+    // Example: Espresso Medium -> 5 + 5 * 0.25 * 1 = 6.25$
+    // Example: Espresso Small -> 5 + 5 * 0.25 * 0 = 5
     private fun handleUIChanges() {
         binding.typeCappuccino.setOnClickListener {
             type = 0
