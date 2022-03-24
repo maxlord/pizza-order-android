@@ -14,38 +14,38 @@
         android:hint="@string/enter_your_name" />
 
     <LinearLayout
-        android:id="@+id/coffeeType"
+        android:id="@+id/pizzaType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ToggleButton
-            android:id="@+id/typeCappuccino"
+            android:id="@+id/typeMargherita"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="@string/cappuccino"
-            android:textOn="@string/cappuccino" />
+            android:textOff="@string/margherita"
+            android:textOn="@string/margherita" />
 
         <ToggleButton
-            android:id="@+id/typeEspresso"
+            android:id="@+id/typeMushroom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="@string/espresso"
-            android:textOn="@string/espresso" />
+            android:textOff="@string/mushroom"
+            android:textOn="@string/mushroom" />
 
         <ToggleButton
-            android:id="@+id/typeRegular"
+            android:id="@+id/typeVegetarian"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="@string/regular"
-            android:textOn="@string/regular" />
+            android:textOff="@string/vegetarian"
+            android:textOn="@string/vegetarian" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/coffeeSize"
+        android:id="@+id/pizzaSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
