@@ -1,4 +1,4 @@
-package com.careem.pizzaorderingapp
+package com.careem.pizzaorderingapp.domain
 
 data class OrderRequest(
     val name: String,
